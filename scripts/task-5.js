@@ -1,12 +1,4 @@
-function formatString(string) {
-    if (string.length > 40) {
-        let shortString = string.slice(0, 40);
-        shortString += "...";
-        return shortString;
-    }
-
-    return string;
-}
+const formatString = string => string.length > 40 ? `${string.slice(0, 41)}...` : string;
 
 console.log(formatString("Curabitur ligula sapien, tincidunt non."));
 // вернется оригинальная строка
